@@ -24,7 +24,8 @@
 
 let btn = document.getElementById("btn-1");
 let list_parent = document.getElementById("ma-liste")
-btn.addEventListener("click", function(){
+btn.addEventListener("click", function(event){
+    
 let valeur = document.getElementById("zone_text").value;
 let valeur2 = document.getElementById("zone_text2").value;
 if(valeur && valeur2 >0){
@@ -110,4 +111,17 @@ tableaux.forEach(function(personne,index){
 // plus.style.cursor= "pointer"
 
 // plus.addEventListener("click",pluplus())
+
+let bouton = document.getElementById("id1");
+bouton.addEventListener("keydown", function(event){
+    if(event.key === "Enter") {
+let valeur = document.getElementById("zone_text").value;
+let valeur2 = document.getElementById("zone_text2").value;
+if(valeur && valeur2 >0){
+let liste = document.createElement("li");
+let span = document.createElement("span");
+let span2 = document.createElement("span");
+}
+
+}})
 
