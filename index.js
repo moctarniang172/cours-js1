@@ -22,58 +22,58 @@
 // }
 // })
 
-let btn = document.getElementById("btn-1");
-let list_parent = document.getElementById("ma-liste")
-btn.addEventListener("click", function(event){
+// let btn = document.getElementById("btn-1");
+// let list_parent = document.getElementById("ma-liste")
+// btn.addEventListener("click", function(event){
     
-let valeur = document.getElementById("zone_text").value;
-let valeur2 = document.getElementById("zone_text2").value;
-if(valeur && valeur2 >0){
-let liste = document.createElement("li");
-let span = document.createElement("span");
-let span2 = document.createElement("span");
+// let valeur = document.getElementById("zone_text").value;
+// let valeur2 = document.getElementById("zone_text2").value;
+// if(valeur && valeur2 >0){
+// let liste = document.createElement("li");
+// let span = document.createElement("span");
+// let span2 = document.createElement("span");
      
-            //bouton supprimer
-    let btn2 = document.createElement("button");
-    btn2.innerHTML = "supprimer"
-    btn2.addEventListener("click", function(){
-        liste.remove();
-    })
-    span.innerHTML = valeur+ "   " ;
-    span2.innerHTML ="  " + valeur2 + "ans";
-    liste.appendChild(span);
-    liste.appendChild(span2);
-    liste.appendChild(btn2)
-    liste.style.display = "flex"
-    liste.style.gap = "20px"
-    liste.style.justifyContent= "center"
-    list_parent.appendChild(liste);
-    list_parent.style.gap ="90px"
+//             //bouton supprimer
+//     let btn2 = document.createElement("button");
+//     btn2.innerHTML = "supprimer"
+//     btn2.addEventListener("click", function(){
+//         liste.remove();
+//     })
+//     span.innerHTML = valeur+ "   " ;
+//     span2.innerHTML ="  " + valeur2 + "ans";
+//     liste.appendChild(span);
+//     liste.appendChild(span2);
+//     liste.appendChild(btn2)
+//     liste.style.display = "flex"
+//     liste.style.gap = "20px"
+//     liste.style.justifyContent= "center"
+//     list_parent.appendChild(liste);
+//     list_parent.style.gap ="90px"
     
-}else{
-    alert("remplir les champs du  formulaire");
-}
-    document.getElementById("zone_text").value = "";
-    document.getElementById("zone_text2").value = "";
-})
+// }else{
+//     alert("remplir les champs du  formulaire");
+// }
+//     document.getElementById("zone_text").value = "";
+//     document.getElementById("zone_text2").value = "";
+// })
 
-                        ///exercice 2
-let btn4 = document.getElementById("btn-3")
-btn4.addEventListener("click", function(){
-  if(btn4.textContent === "cliquer"){
-    btn4.innerHTML = "vous avez clquer"
-  }else if(btn4.textContent === "vous avez clquer"){
-    btn4.innerHTML = "cliquer"
-  }
+//                         ///exercice 2
+// let btn4 = document.getElementById("btn-3")
+// btn4.addEventListener("click", function(){
+//   if(btn4.textContent === "cliquer"){
+//     btn4.innerHTML = "vous avez clquer"
+//   }else if(btn4.textContent === "vous avez clquer"){
+//     btn4.innerHTML = "cliquer"
+//   }
   
     
-})
+// })
 
-
-let btn5 = document.getElementById("btn-4")
-btn5.addEventListener("click", function(){
-    btn5.style.color= "red"
-})
+//    //exercice 3
+// let btn5 = document.getElementById("btn-4")
+// btn5.addEventListener("click", function(){
+//     btn5.style.color= "red"
+// })
 
 const tableaux = [
     { nom: "Moctar", prenom: "Niang" },
@@ -112,16 +112,16 @@ tableaux.forEach(function(personne,index){
 
 // plus.addEventListener("click",pluplus())
 
-let bouton = document.getElementById("id1");
-bouton.addEventListener("keydown", function(event){
-    if(event.key === "Enter") {
-let valeur = document.getElementById("zone_text").value;
-let valeur2 = document.getElementById("zone_text2").value;
-if(valeur && valeur2 >0){
-let liste = document.createElement("li");
-let span = document.createElement("span");
-let span2 = document.createElement("span");
-}
+// let bouton = document.getElementById("id1");
+// bouton.addEventListener("keydown", function(event){
+//     if(event.key === "Enter") {
+// let valeur = document.getElementById("zone_text").value;
+// let valeur2 = document.getElementById("zone_text2").value;
+// if(valeur && valeur2 >0){
+// let liste = document.createElement("li");
+// let span = document.createElement("span");
+// let span2 = document.createElement("span");
+// }
 
-}})
+// }})
 

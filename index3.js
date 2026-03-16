@@ -1,4 +1,5 @@
 let bouton = document.getElementById("id1");
+let liste = document.getElementById("liste")
 bouton.addEventListener("keydown", function(event){
     if(event.key === "Enter") {
 let valeur = document.getElementById("zone_text").value;
