@@ -30,15 +30,23 @@ formulair.addEventListener("submit", function(event){
 
 //creer la fonction qui va nous permettre parcourire la table ou le tableau d'objet
 function afficher(){
-   const resultat = etudiant.map(function(personne){
+   const resultat = etudiant.map(function(personne,index){
       return "<li>" +
                  "👤 " + personne.nom + " " + personne.prenom +
                  " | 📧 " + personne.adresse +
+                 "<button onclick='supprimer("+ index +")'>supprimer</button>"
                "</li>";
               
    })
     document.getElementById("liste").innerHTML = resultat.join("")
 }
+//creation d'un bouton pour supprimner
+ function supprimer(index){
+    etudiant.splice(index,1);
+     afficher(); 
+ }
+
+
  // console.log("votre nom est:" + " " + nom );
     // console.log("votre prenom est:" + " " + prenom );
     // console.log("votre adresse est:" + " " + adresse );
