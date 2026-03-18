@@ -3,30 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdn.tailwindcss.com"></script>
     <title>Systeme CRUD en js</title>
 </head>
-<body>
+<body class="bg-[#eff1f2]">
 
     <!--premierement,on va creer le formulaire de saisie-->
-    <form action="" id="mon-formulaire">
-        <div>
-            <div class="enfants">
-                <p>nom</p>
-                <input type="text" id="nom" value="" placeholder="votre nom">
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+     <form action="" id="mon-formulaire" class="m-4 text-center ">
+        <div class="mt-12 bg-[#ffffff] rounded-lg h-[60vh]">
+         <div class="pt-4 text-3xl font-bold">
+            <h1>Ajouter un Etudiant</h1> 
+         </div>
+            <div class="mx-8 flex flex-wrap gap-4">
+                <p class="text-2xl ">nom</p>
+                <input type="text" id="nom" value="" placeholder="votre nom" class="bg-[#fafaf9] rounded-lg w-[90%] h-[5vh]">
             </div>
-             <div class="enfants">
-                <p>prenom</p>
-                <input type="text" id="prenom" value="" placeholder="votre prenom">
+
+             <div class="mx-8 flex flex-wrap gap-4">
+                <p class="text-2xl ">prenom</p>
+                <input type="text" id="prenom" value="" placeholder="votre prenom" class="bg-[#fafaf9] rounded-lg w-[90%] h-[5vh]">
             </div>
-             <div class="enfants">
-                <p>adresse</p>
-                <input type="text" id="adresse" value="" placeholder="votre adresse">
+             <div class="mx-8 flex flex-wrap gap-4">
+                <p class="text-2xl ">adresse</p>
+                <input type="text" id="adresse" value="" placeholder="votre adresse" class="bg-[#fafaf9] rounded-lg w-[90%] h-[5vh]">
             </div>
+              <input type="submit" value="valider" class="bg-[#2563eb] w-[70%] h-[4vh] mt-8 rounded-lg text-white cursor-pointer">
         </div>
-        <input type="submit" value="valider">
+      
     </form>
+
+    <!-- mon table -->
+      <div class="bg-[#ffffff] mt-16 bg-[#ffffff] rounded-lg  h-[30vh]">
+
+      <!-- Tableau HTML -->
+        <table class="table-auto w-[100%]">
+          <!-- THEAD : une seule fois, fixe dans le HTML -->
+          <thead class="">
+            <tr class="gap-8 border">
+              <th class="border border-gray-300">id</th>
+              <th class="border border-gray-300">Nom</th>
+              <th class="border border-gray-300">Prénom</th>
+              <th class="border border-gray-300">Adresse</th>
+              <th class="border border-gray-300">Action</th>
+            </tr>
+          </thead>
+          <!-- TBODY : map génère les lignes ici -->
+          <tbody id="liste"></tbody>
+        </table>
+       
+      </div>
+
+   </div>
     <div>
-        <ul id="liste"></ul>
+       
     </div>
     
 </body>
