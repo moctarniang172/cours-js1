@@ -1,141 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculatrice JS</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
-    .calculator {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    #resultat {
-      width: 100%;
-      height: 50px;
-      margin-bottom: 10px;
-      text-align: right;
-      font-size: 24px;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 60px);
-      gap: 10px;
-    }
-    button {
-      height: 60px;
-      font-size: 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #ddd;
-    }
-    .equal {
-      grid-column: span 2;
-      background: orange;
-      color: #fff;
-    }
-  </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  <title>mon espace d'apprentissage de javascript</title>
 </head>
-<body>
-  <div class="calculator">
-    <input type="text" id="resultat" disabled>
-    <div class="buttons">
-      <button onclick="ajouter('7')">7</button>
-      <button onclick="ajouter('8')">8</button>
-      <button onclick="ajouter('9')">9</button>
-      <button onclick="ajouter('/')">/</button>
+<body class="bg-[#62656b]">
 
-      <button onclick="ajouter('4')">4</button>
-      <button onclick="ajouter('5')">5</button>
-      <button onclick="ajouter('6')">6</button>
-      <button onclick="ajouter('*')">*</button>
 
-      <button onclick="ajouter('1')">1</button>
-      <button onclick="ajouter('2')">2</button>
-      <button onclick="ajouter('3')">3</button>
-      <button onclick="ajouter('-')">-</button>
+  <div class="py-8 flex justify-between items-center bg-[#30302e] w-full h-[10vh] border border-white shadow-xl rounded-md">
 
-      <button onclick="ajouter('0')">0</button>
-      <button onclick="ajouter('%')">%</button>
-      <button onclick="ajouter('+')">+</button>
-      <button onclick="effacer()">C</button>
-
-      <button class="equal" onclick="calculer()">=</button>
+    <div class="m-4 text-3xl text-white font-bold">
+     <p> <span class="w-[10px] h-[10vh] rounded-full bg-[#378add]"></span>
+      js<span class="text-[#378add]" >Learn</span></p>
+    </div>
+    <nav class="m-4 flex justify-center style-none text-decoration-none">
+      <ul class="py-4 flex justify-center gap-4 cursor-pointer text-white">
+        <li><a href="exercice1.html">exercice-1</a></li>
+        <li>exercice-2</li>
+        <li>exercice-3</li>
+      </ul>
+    </nav>
+    <div class="m-4 text-white text-center w-[10%] h-[4vh] bg-[#30302e] rounded-md border border-white">
+      <p><a href="">commencer</a></p>
     </div>
   </div>
 
-  <script>
-    let expression = "";
 
-    function ajouter(val) {
-      expression += val;
-      document.getElementById("resultat").value = expression;
-    }
+  <!-- partie accueil -->
+   <section class="py-8 bg-[#262624] w-full h-[40vh] text-center">
 
-    function effacer() {
-      expression = "";
-      document.getElementById("resultat").value = "";
-    }
+    <div class="ms-[45%] text-[#5288bd] w-[10%] text-center">
+      <p class="bg-[#e6f1fb] justify-content-center">Apprendre javascript</p>
+    </div>
+    <div class="text-3xl text-white mt-8 ">
+      Mon espace <span class="text-[#378add]">d'apprentissage</span><br>  de javascrip
+    </div>
 
-    function calculer() {
-      try {
-        // Récupère les deux nombres et l'opérateur
-        let operateursList = ['+','-','*','/','%'];
-        let operateur = operateursList.find(op => expression.includes(op));
+    <div class="mt-8 text-white ">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, quas non placeat itaque corporis vero consectetur harum aperiam ea nemo?
+    </div>
 
-        if (operateur) {
-          let [nombre1, nombre2] = expression.split(operateur).map(Number);
+    <div class="mt-8 flex justify-center text-white gap-4">
+      <a href="" class="bg-[#262624] shodow-md border border-white rounded-md inset-ring w-[10%] h-[4%]">commencer le cours</a>
+      <a href="" class="bg-[#262624] shodow-md border border-white rounded-md inset-ring w-[10%] h-[4%]">voir les exercices</a>
+    </div>
 
-          let resultat = operteurs(nombre1, nombre2, operateur);
-          document.getElementById("resultat").value = resultat;
-          expression = resultat.toString();
-        }
-      } catch (error) {
-        document.getElementById("resultat").value = "Erreur";
-      }
-    }
+   </section>
 
-    // === Tes fonctions ===
-    function addition(nombre1,nombre2){
-      return nombre1 + nombre2;
-    }
-    function sustraction(nombre1,nombre2){
-      return nombre1 - nombre2;
-    }
-    function multiplication(nombre1,nombre2){
-      return nombre1 * nombre2;
-    }
-    function division(nombre1,nombre2){
-      return nombre1 / nombre2;
-    }
-    function modulo(nombre1,nombre2){
-      return nombre1 % nombre2;
-    }
-    function operteurs (nombre1,nombre2,operateur){
-      switch(operateur){
-        case "+": return addition(nombre1,nombre2);
-        case "-": return sustraction(nombre1,nombre2);
-        case "*": return multiplication(nombre1,nombre2);
-        case "/": return division(nombre1,nombre2);
-        case "%": return modulo(nombre1,nombre2);
-        default: return "Opérateur non valide";
-      }
-    }
-  </script>
+  
 </body>
 </html>
