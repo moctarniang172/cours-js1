@@ -25,21 +25,22 @@ formulaire.addEventListener("submit", function(event) {
         indexEnCours = -1;
         document.querySelector("#btn-2").value = "Valider";
         alert("Modifié avec succès !");
+      
     } else {
         // On fait un ajout sur le tableux  
         etudiant.push({ nom: nom, prenom: prenom, adresse: adresse });
         alert("Etudiant Ajouté avec succès !");
     }
 
-    afficher();
+    afficher(etudiant);
    //on initialise le formulaire apres avoir enrigistrer les donnees
     document.getElementById("nom").value     = "";
     document.getElementById("prenom").value  = "";
     document.getElementById("adresse").value = "";
 });
 //creer la function afficher qui va nous permettre d'afficher le tableau des etudiants
-function afficher() {
-    const resultat = etudiant.map(function(personne, index) {
+function afficher(tableau) {
+    const resultat = tableau.map(function(personne, index) {
         return `
             <tr>
                 <td class="border border-gray-300 text-center">${index + 1}</td>
@@ -72,7 +73,7 @@ function afficher() {
  //methode ou fonction pour la suppression d'un etudiant
 function supprimer(index) {
     etudiant.splice(index, 1);
-    afficher();
+    afficher(etudiant);
 }
  //fonction pour la modification d'un etudiant
 function update(index) {
@@ -81,5 +82,6 @@ function update(index) {
     document.getElementById("nom").value     = e.nom;
     document.getElementById("prenom").value  = e.prenom;
     document.getElementById("adresse").value = e.adresse;
-    document.querySelector("#btn-2").value = "Enregistrer"; // .value pour input
+    
+    
 }

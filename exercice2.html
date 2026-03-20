@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Système CRUD en JS</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>systeme de crud avec la barre de filitrage</title>
 </head>
 <body class="bg-[#eff1f2]">
-   <p>recherche</p>
-    <input type="text" id="rechercher" value="">;
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+  <div class="grid grid-cols-1">
+      <!-- barre de recherche pour le filtrage -->
+    <div class="mt-8 text-center ">
+        <input type="text" id="filtrage" value="" placeholder="chercher un etudiant" class="w-[50%] h-[5vh] rounded-full">
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
 
     <!-- FORMULAIRE -->
     <form id="mon-formulaire" class="mt-6">
@@ -67,7 +69,8 @@
     </div>
 
   </div>
-
-  <script src="exo.js"></script>
+  </div>
+    
 </body>
+<script src="exo2.js"></script>
 </html>
